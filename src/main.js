@@ -23,6 +23,22 @@ export default class App {
         return resultado;
     }
 
+    obtenerDivisibles(numero){
+
+        let divisores = 0 ;
+        let i = 1
+        do{
+
+            if((numero %  i == 0)){
+                divisores++;
+            }
+
+            i++
+        } while (i <= numero);
+
+        return divisores;
+    }
+
 }
 
 let app = new App();
@@ -39,3 +55,10 @@ console.log(app.convertirAString(1));
 console.log(app.convertirAString(2));
 console.log(app.convertirAString(3));
 console.log(app.convertirAString(4));
+
+console.log(app.obtenerDivisibles(1));
+console.log(app.obtenerDivisibles(2));
+console.log(app.obtenerDivisibles(3));
+console.log(app.obtenerDivisibles(4));
+console.log(app.obtenerDivisibles(5));
+console.log(app.obtenerDivisibles(6));
