@@ -39,6 +39,17 @@ export default class App {
         return divisores;
     }
 
+    elevar(numero, potencia){
+       
+        let resultado = 1;
+
+        for (let i= 1; i <= potencia; i++){
+           
+            resultado = resultado * numero;
+        }
+        return resultado
+
+    }
 }
 
 let app = new App();
@@ -62,3 +73,8 @@ console.log(app.obtenerDivisibles(3));
 console.log(app.obtenerDivisibles(4));
 console.log(app.obtenerDivisibles(5));
 console.log(app.obtenerDivisibles(6));
+
+console.log(app.elevar(1, 3));
+console.log(app.elevar(2, 10));
+console.log(app.elevar(5, 3));
+console.log(app.elevar(2, 5));
